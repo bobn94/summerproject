@@ -21,6 +21,6 @@ private:
 	int m_speed;
 	int m_armorValue;
 	int m_strength;
-	int m_skillLevel[8];
+	int m_weaponSkillLevel[8];
 	int* m_equiped[7];
 };

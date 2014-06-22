@@ -2,10 +2,10 @@
 #include "stdafx.h"
 #include "PlayerObject.h"
 
-	PlayerObject::PlayerObject(){
+	PlayerObject::PlayerObject() : CharacterObject(){
 
 	}
-	PlayerObject::PlayerObject(int speed, int armorValue, int strength, int level, sf::String name){
+	PlayerObject::PlayerObject(int speed, int armorValue, int strength, int level, sf::String name) : CharacterObject(speed, armorValue, strength, level, name){
 
 	}
 	void PlayerObject::SetSkillpoints(int skillpoints){
