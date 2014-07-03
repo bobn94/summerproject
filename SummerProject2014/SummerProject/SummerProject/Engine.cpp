@@ -27,30 +27,30 @@ void Engine::Run(){
 		mgr.Attach(new GameStateA());
 		mgr.Attach(new OptionsState());
 		mgr.Attach(new LoadState());
-		mgr.SetState("MenuState");
+		mgr.SetState("GameStateA");
 		mgr.isRunning = true;
 
-		bool fullscreen = true;
+		bool fullscreen = false;
 		if (fullscreen)
 		{
-			m_window = new sf::RenderWindow(sf::VideoMode(1920, 1080), "Playground Panic", sf::Style::Fullscreen);
+			m_window = new sf::RenderWindow(sf::VideoMode(1080, 720), "Generic Dungeoncrawler", sf::Style::Fullscreen);
 		}
 		else
 		{
-			m_window = new sf::RenderWindow(sf::VideoMode(1080, 720), "Playground Panic");
+			m_window = new sf::RenderWindow(sf::VideoMode(1080, 720), "Generic Dungeoncrawler");
 		}
-		
+		m_level = Level();
 		
 
 		while (mgr.IsRunning())
 		{
 			m_deltatime = static_cast<float>(deltaClock.restart().asSeconds()) / 1000;
-
+			//mgr.Update(m_deltatime, m_window, 
 		
 			if(!m_window->isOpen()){
 				mgr.isRunning = false;
 			}
-			//mgr.Update(m_deltatime, *m_window, m_level);
+			mgr.Update(m_deltatime, *m_window, m_level);
 		
 			
 		}

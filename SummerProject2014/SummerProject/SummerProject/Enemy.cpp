@@ -9,13 +9,13 @@
 			m_dialog[i] = "";
 		}
 	}
-	Enemy::Enemy(int speed, int armorValue, int strength, int level, sf::String name) : CharacterObject(speed, armorValue, strength, level, name){
+	Enemy::Enemy(int speed, int armorValue, int strength, int level, sf::String name, sf::Vector2f position, sf::Vector2f extention) : CharacterObject(speed, armorValue, strength, level, name, position, extention){
 		m_inCombat = false;
 		for(int i = 0; i < 5; i++){
 			m_dialog[i] = "";
 		}
 	}
-	Enemy::Enemy(int speed, int armorValue, int strength, int level, sf::String name, Skills* skill) : CharacterObject(speed, armorValue, strength, level, name){
+	Enemy::Enemy(int speed, int armorValue, int strength, int level, sf::String name, Skills* skill, sf::Vector2f position, sf::Vector2f extention) : CharacterObject(speed, armorValue, strength, level, name, position, extention){
 		m_inCombat = false;
 		m_skill = skill;
 		for(int i = 0; i < 5; i++){

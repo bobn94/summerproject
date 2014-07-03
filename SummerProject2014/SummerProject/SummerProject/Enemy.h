@@ -3,11 +3,11 @@
 #include "CharacterObject.h"
 #include "Skills.h"
 
-class Enemy : CharacterObject{
+class Enemy : public CharacterObject{
 public:
 	Enemy();
-	Enemy(int speed, int armorValue, int strength, int level, sf::String name);
-	Enemy(int speed, int armorValue, int strength, int level, sf::String name, Skills* skill);
+	Enemy(int speed, int armorValue, int strength, int level, sf::String name, sf::Vector2f position, sf::Vector2f extention);
+	Enemy(int speed, int armorValue, int strength, int level, sf::String name, Skills* skill, sf::Vector2f position, sf::Vector2f extention);
 	void SetSkill(Skills* skill);
 	Skills* GetSkill();
 	bool AddDialog(sf::String line);

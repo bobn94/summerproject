@@ -2,20 +2,14 @@
 
 #include "stdafx.h"
 #include "State.h"
+#include <vector>
 
 
 class Collider;
-class CountdownTimer;
 class PlayerObject;
-class ProjectileObject;
-class SlowKid;
-class BikeKid;
 class Enemy;
-class SpriteObject;
-class ParentUI;
-class Arrow;
-class Indicator;
-class ParentBall;
+class Ally;
+class MapObject;
 
 
 class GameStateA : public State {
@@ -28,20 +22,21 @@ public:
 	std::string Next();
 	bool IsType(const std::string &type);
 private:
-	
+	std::vector<Enemy*> m_enemies;
+	std::vector<Ally*> m_allies;
+	std::vector<MapObject*> m_mapObject;
+	PlayerObject* m_player;
 	sf::Vector2f m_mouse_position;
 
 	std::string m_next_state;
-	/////////////////////////////////////SOUND
+	///////Textures
+	sf::Texture m_dirtTexture;
+	sf::Texture m_stoneTexture;
+	sf::Texture m_fireTexture;
+	sf::Texture m_playerTexture;
+	sf::Texture m_skeletonWarrior_Texture;
+	sf::Texture m_shopkeeperTexture;
 
-	
-	//////////////////////////////////////
-
-	
-
-	//StateManager * mgr;
-	CountdownTimer* m_timer;
-	PlayerObject * m_player;
 	
 
 	float m_global_speed;

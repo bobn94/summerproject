@@ -5,7 +5,7 @@
 #include "MenuState.h"
 #include "LoadState.h"
 #include "stdafx.h"
-//#include "Level.h"
+#include "Level.h"
 
 class PlayerObject;
 class Collider;
@@ -23,5 +23,5 @@ private:
 	float m_deltatime;
 	sf::Clock deltaClock;
 	sf::RenderWindow* m_window;
-	//Level m_level;
+	Level m_level;
 };

@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Objects">
+      <UniqueIdentifier>{2aeea24c-a716-42cf-834a-560682a60ea5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Characters">
+      <UniqueIdentifier>{ccde2cb4-3144-4723-848b-52338d2f8e81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Objects\Items">
+      <UniqueIdentifier>{afc0d231-9629-49ce-8521-7ceec2814272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{844ef60d-fc37-40a6-b0ec-37add500eb7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Characters">
+      <UniqueIdentifier>{795ea697-f46e-4217-858f-a4e77ad51276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Items">
+      <UniqueIdentifier>{50cd8476-9675-4a54-b7e2-9829dcf2e0cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -30,9 +48,6 @@
     <ClInclude Include="MenuState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OptionsState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="State.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -45,32 +60,50 @@
     <ClInclude Include="LoadState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CharacterObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Skills.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ItemGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
     <ClInclude Include="Ally.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Objects\Characters</Filter>
     </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="CharacterObject.h">
+      <Filter>Header Files\Objects\Characters</Filter>
     </ClInclude>
-    <ClInclude Include="Weapon.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\Objects\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerObject.h">
+      <Filter>Header Files\Objects\Characters</Filter>
     </ClInclude>
     <ClInclude Include="Armor.h">
+      <Filter>Header Files\Objects\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files\Objects\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>Header Files\Objects\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsState.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapObject.h">
+      <Filter>Header Files\Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -98,28 +131,43 @@
     <ClCompile Include="LoadState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ItemGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CharacterObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Objects</Filter>
     </ClCompile>
     <ClCompile Include="Ally.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Objects\Characters</Filter>
     </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="CharacterObject.cpp">
+      <Filter>Source Files\Objects\Characters</Filter>
     </ClCompile>
-    <ClCompile Include="Weapon.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files\Objects\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerObject.cpp">
+      <Filter>Source Files\Objects\Characters</Filter>
     </ClCompile>
     <ClCompile Include="Armor.cpp">
+      <Filter>Source Files\Objects\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files\Objects\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>Source Files\Objects\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

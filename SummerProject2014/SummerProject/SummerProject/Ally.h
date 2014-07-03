@@ -2,11 +2,11 @@
 #include "stdafx.h"
 #include "CharacterObject.h"
 
-class Ally : CharacterObject{
+class Ally : public CharacterObject{
 public:
 	Ally();
-	Ally(int speed, int armorValue, int strength, int level, sf::String name);
-	Ally(int speed, int armorValue, int strength, int level, sf::String name, bool isShop);
+	Ally(int speed, int armorValue, int strength, int level, sf::String name, sf::Vector2f position, sf::Vector2f extention);
+	Ally(int speed, int armorValue, int strength, int level, sf::String name, bool isShop, sf::Vector2f position, sf::Vector2f extention);
 	bool AddDialog(sf::String line);
 	sf::String GetLine(int line);
 

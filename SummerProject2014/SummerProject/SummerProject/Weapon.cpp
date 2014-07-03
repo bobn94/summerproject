@@ -9,7 +9,7 @@ Weapon::Weapon(){
 	m_weaponType = 0;
 	m_speed = 0;
 }
-Weapon::Weapon(sf::String name, int level, sf::String description, int value, int range, float hitChanse, int weaponType, int speed) : Item(name, level, description, value){
+Weapon::Weapon(sf::String name, int level, sf::String description, int value, int range, float hitChanse, int weaponType, int speed, sf::Vector2f position, sf::Vector2f extention) : Item(name, level, description, value, position, extention){
 	m_range = range;
 	m_hitChanse = hitChanse;
 	m_weaponType = weaponType;

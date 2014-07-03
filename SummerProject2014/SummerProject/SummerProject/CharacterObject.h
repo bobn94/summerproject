@@ -2,21 +2,22 @@
 #include "stdafx.h"
 #include "GameObject.h"
 
-class CharacterObject : GameObject{
+class CharacterObject : public GameObject{
 	
 public:
 	CharacterObject();
-	CharacterObject(int speed, int armorValue, int strength, int level, sf::String name);
+	CharacterObject(int speed, int armorValue, int strength, int level, sf::String name, sf::Vector2f position, sf::Vector2f extention);
 	void SetSkillLevel(int weapon, int level);
 	void SetSpeed(int speed);
 	void SetArmorValue(int armor);
 	void SetEquiped(int slot, int *item);
-	void strenght(int strength);
+	void SetStrenght(int strength);
 	int GetSpeed();
 	int GetArmorValue();
 	int GetStrenght();
 	int GetSkillLevel(int Weapon);
 	int* GetEquiped(int slot);
+
 private:
 	int m_speed;
 	int m_armorValue;
