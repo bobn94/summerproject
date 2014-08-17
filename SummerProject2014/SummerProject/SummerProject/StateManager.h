@@ -17,6 +17,7 @@ public:
 	 void SetState(const std::string &type);
 	 void ChangeState();
 	 bool IsRunning();
+	 
 
 	 bool isRunning;
 	 State *m_current;

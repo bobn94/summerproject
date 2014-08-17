@@ -3,6 +3,8 @@
 #include "CharacterObject.h"
 #include "Skills.h"
 
+class PlayerObject;
+
 class Enemy : public CharacterObject{
 public:
 	Enemy();
@@ -12,6 +14,7 @@ public:
 	Skills* GetSkill();
 	bool AddDialog(sf::String line);
 	sf::String GetLine(int line);
+	bool Update(PlayerObject player, float deltatime);
 private:
 	bool m_inCombat;
 	Skills* m_skill;

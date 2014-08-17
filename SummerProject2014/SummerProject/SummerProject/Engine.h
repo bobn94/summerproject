@@ -4,6 +4,7 @@
 #include "OptionsState.h"
 #include "MenuState.h"
 #include "LoadState.h"
+#include "CombatState.h"
 #include "stdafx.h"
 #include "Level.h"
 

@@ -27,6 +27,7 @@ void Engine::Run(){
 		mgr.Attach(new GameStateA());
 		mgr.Attach(new OptionsState());
 		mgr.Attach(new LoadState());
+		mgr.Attach(new CombatState());
 		mgr.SetState("GameStateA");
 		mgr.isRunning = true;
 
@@ -39,8 +40,8 @@ void Engine::Run(){
 		{
 			m_window = new sf::RenderWindow(sf::VideoMode(1080, 720), "Generic Dungeoncrawler");
 		}
-		m_level = Level();
-		
+		m_level = Level(*m_window);
+		m_level.Load(*m_window);
 
 		while (mgr.IsRunning())
 		{

@@ -22,20 +22,11 @@ public:
 	std::string Next();
 	bool IsType(const std::string &type);
 private:
-	std::vector<Enemy*> m_enemies;
-	std::vector<Ally*> m_allies;
-	std::vector<MapObject*> m_mapObject;
-	PlayerObject* m_player;
+	
 	sf::Vector2f m_mouse_position;
 
 	std::string m_next_state;
 	///////Textures
-	sf::Texture m_dirtTexture;
-	sf::Texture m_stoneTexture;
-	sf::Texture m_fireTexture;
-	sf::Texture m_playerTexture;
-	sf::Texture m_skeletonWarrior_Texture;
-	sf::Texture m_shopkeeperTexture;
 
 	
 

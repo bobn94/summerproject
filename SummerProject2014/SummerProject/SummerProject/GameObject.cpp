@@ -40,10 +40,13 @@ int GameObject::GetLevel(){
 void GameObject::SetSprite(sf::Sprite sprite){
 	m_sprite = sprite;
 	m_sprite.setPosition(m_position.x, m_position.y);
+	
 }
 void GameObject::SetPosition(sf::Vector2f pos){
 	m_position = pos;
-	m_sprite.setPosition(m_position.x, m_position.y);
+	if(m_sprite.getTexture() != nullptr){
+		m_sprite.setPosition(m_position.x, m_position.y);
+	}
 	m_collider.m_position = m_position;
 }
 sf::Sprite GameObject::GetSprite(){

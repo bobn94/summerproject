@@ -6,22 +6,22 @@ class CharacterObject : public GameObject{
 	
 public:
 	CharacterObject();
-	CharacterObject(int speed, int armorValue, int strength, int level, sf::String name, sf::Vector2f position, sf::Vector2f extention);
+	CharacterObject(float speed, float armorValue, float strength, int level, sf::String name, sf::Vector2f position, sf::Vector2f extention);
 	void SetSkillLevel(int weapon, int level);
-	void SetSpeed(int speed);
-	void SetArmorValue(int armor);
+	void SetSpeed(float speed);
+	void SetArmorValue(float armor);
 	void SetEquiped(int slot, int *item);
-	void SetStrenght(int strength);
-	int GetSpeed();
-	int GetArmorValue();
-	int GetStrenght();
+	void SetStrenght(float strength);
+	float GetSpeed();
+	float GetArmorValue();
+	float GetStrenght();
 	int GetSkillLevel(int Weapon);
 	int* GetEquiped(int slot);
 
 private:
-	int m_speed;
-	int m_armorValue;
-	int m_strength;
+	float m_speed;
+	float m_armorValue;
+	float m_strength;
 	int m_weaponSkillLevel[8];
 	int* m_equiped[7];
 };

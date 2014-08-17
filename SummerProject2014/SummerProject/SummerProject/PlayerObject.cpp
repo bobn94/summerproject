@@ -25,16 +25,16 @@
 	}
 	void PlayerObject::Update(){
 		if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
-			SetPosition(sf::Vector2f(GetPosition().x - 0.01 * GetSpeed(), GetPosition().y));
+			SetPosition(sf::Vector2f(GetPosition().x - 0.02 * GetSpeed(), GetPosition().y));
 		}
 		if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-			SetPosition(sf::Vector2f(GetPosition().x + 0.01 * GetSpeed(), GetPosition().y));
+			SetPosition(sf::Vector2f(GetPosition().x + 0.02 * GetSpeed(), GetPosition().y));
 		}
 		if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up)){
-			SetPosition(sf::Vector2f(GetPosition().x, GetPosition().y - 0.01 * GetSpeed()));
+			SetPosition(sf::Vector2f(GetPosition().x, GetPosition().y - 0.02 * GetSpeed()));
 		}
 		if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)){
-			SetPosition(sf::Vector2f(GetPosition().x, GetPosition().y + 0.01 * GetSpeed()));
+			SetPosition(sf::Vector2f(GetPosition().x, GetPosition().y + 0.02 * GetSpeed()));
 		}
 		
 	}

@@ -5,7 +5,7 @@
 CharacterObject::CharacterObject() : GameObject(){
 		
 	}
-CharacterObject::CharacterObject(int speed, int armorValue, int strength, int level, sf::String name, sf::Vector2f position, sf::Vector2f exstention) : GameObject(name, level, position, exstention){
+CharacterObject::CharacterObject(float speed, float armorValue, float strength, int level, sf::String name, sf::Vector2f position, sf::Vector2f exstention) : GameObject(name, level, position, exstention){
 		m_speed = speed;
 		m_armorValue = armorValue;
 		m_strength = strength;
@@ -19,25 +19,25 @@ CharacterObject::CharacterObject(int speed, int armorValue, int strength, int le
 	void CharacterObject::SetSkillLevel(int weapon, int level){
 		m_weaponSkillLevel[weapon] = level;
 	}
-	void CharacterObject::SetSpeed(int speed){
+	void CharacterObject::SetSpeed(float speed){
 		m_speed = speed;
 	}
-	void CharacterObject::SetArmorValue(int armor){
+	void CharacterObject::SetArmorValue(float armor){
 		m_armorValue = armor;
 	}
 	void CharacterObject::SetEquiped(int slot, int *item){
 		m_equiped[slot] = item;
 	}
-	void CharacterObject::SetStrenght(int strength){
+	void CharacterObject::SetStrenght(float strength){
 		m_strength = strength;
 	}
-	int CharacterObject::GetSpeed(){
+	float CharacterObject::GetSpeed(){
 		return m_speed;
 	}
-	int CharacterObject::GetArmorValue(){
+	float CharacterObject::GetArmorValue(){
 		return m_armorValue;
 	}
-	int CharacterObject::GetStrenght(){
+	float CharacterObject::GetStrenght(){
 		return m_strength;
 	}
 	int CharacterObject::GetSkillLevel(int Weapon){
